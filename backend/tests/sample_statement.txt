@@ -1,0 +1,27 @@
+CHASE FREEDOM UNLIMITED — STATEMENT
+Account ending in 4421
+Statement period: 2026-04-01 to 2026-04-30
+
+Date        Description                              Amount
+04/02       STARBUCKS STORE #1234 SEATTLE WA         -6.45
+04/03       SHELL OIL 57293821                       -42.18
+04/03       AMAZON.COM*MK4G2                         -29.99
+04/05       WHOLE FOODS MARKET #103                  -127.84
+04/06       NETFLIX.COM                              -15.49
+04/07       UBER TRIP HELP.UBER.COM                  -18.20
+04/09       PAYMENT - THANK YOU                      450.00
+04/10       SPOTIFY USA                              -10.99
+04/12       CHIPOTLE 2234                            -14.75
+04/14       CVS PHARMACY 09812                       -31.42
+04/15       SAFEWAY #2891                            -68.50
+04/17       APPLE.COM/BILL                           -2.99
+04/18       UNITED 0162345987                        -312.40
+04/20       AIRBNB * HMQX2W                          -480.00
+04/22       STARBUCKS STORE #5621                    -7.10
+04/24       TARGET 00012876                          -54.32
+04/25       LYFT *RIDE FRI 11AM                      -22.15
+04/27       PG&E ELECTRIC PAYMENT                    -89.74
+04/28       CHIPOTLE 8112                            -13.50
+04/30       WHOLE FOODS MARKET #103                  -94.12
+
+New Balance: $1,191.16
