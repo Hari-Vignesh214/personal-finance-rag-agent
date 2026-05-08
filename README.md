@@ -8,8 +8,9 @@ Built end-to-end as a portfolio project demonstrating **agentic LLMs**, **struct
 output**, **hybrid retrieval (SQL + vector)**, and **tool use** — all wired together
 with LangGraph and Claude Sonnet.
 
-> Phase 1 (this repo): Python backend — FastAPI + LangGraph agent + DuckDB + Chroma.
-> Phase 2 (planned): Next.js frontend.
+> Phase 1: Python backend — FastAPI + LangGraph agent + DuckDB + Chroma.
+> Phase 2: Next.js + TypeScript + Tailwind frontend with chat, upload dropzone,
+> filterable transaction table, and expandable tool-call traces.
 
 ---
 
@@ -65,13 +66,15 @@ categorized as `dining`). The agent picks the right tool for each question.
 | Vector store     | Chroma (persistent)                             |
 | PDF parsing      | pdfplumber                                      |
 | API              | FastAPI + Uvicorn                               |
-| Frontend (Phase 2)| Next.js                                        |
+| Frontend         | Next.js 16 · React 19 · TypeScript · Tailwind v4 |
 
 ---
 
 ## Setup
 
-Requires Python 3.11+.
+Requires Python 3.11+ and Node 20+.
+
+### Backend
 
 ```bash
 cd backend
@@ -85,6 +88,19 @@ uvicorn app.main:app --reload
 
 The API will be at `http://localhost:8000` and interactive docs at
 `http://localhost:8000/docs`.
+
+### Frontend
+
+In a second terminal:
+
+```bash
+cd frontend
+npm install
+cp .env.local.example .env.local   # default points at http://localhost:8000
+npm run dev
+```
+
+Open <http://localhost:3000>.
 
 ---
 
@@ -206,7 +222,8 @@ via the running API.
 
 ## Roadmap
 
-- [ ] **Phase 2: Next.js frontend** — chat UI + upload dropzone + transaction table.
+- [x] **Phase 1: backend** — FastAPI + LangGraph agent + DuckDB + Chroma.
+- [x] **Phase 2: Next.js frontend** — chat UI + upload dropzone + transaction table + tool-call trace viewer.
 - [ ] Streaming chat responses (SSE) instead of single-shot.
 - [ ] Persistent agent checkpointer (Postgres / SQLite).
 - [ ] Multi-account support with account-level filtering.

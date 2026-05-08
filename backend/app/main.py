@@ -3,7 +3,7 @@ from __future__ import annotations
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api import chat, upload
+from app.api import chat, transactions, upload
 from app.config import settings
 from app.storage import db
 
@@ -23,6 +23,7 @@ app.add_middleware(
 
 app.include_router(upload.router)
 app.include_router(chat.router)
+app.include_router(transactions.router)
 
 
 @app.on_event("startup")
@@ -45,5 +46,5 @@ def root() -> dict:
     return {
         "name": "personal-finance-rag-agent",
         "docs": "/docs",
-        "endpoints": ["/api/health", "/api/upload", "/api/chat"],
+        "endpoints": ["/api/health", "/api/upload", "/api/chat", "/api/transactions"],
     }
